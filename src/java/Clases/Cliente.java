@@ -51,7 +51,22 @@ public class Cliente  implements java.io.Serializable {
        this.sueldoLiquido = sueldoLiquido;
        this.enfermedad = enfermedad;
     }
-   
+
+    public Cliente(Integer idCliente, String rut, String nombre, String apePat, String apeMat, String sexo, Integer hijos, String correo, String direccion, String sueldoLiquido, Character enfermedad) {
+        this.idCliente = idCliente;
+        this.rut = rut;
+        this.nombre = nombre;
+        this.apePat = apePat;
+        this.apeMat = apeMat;
+        this.sexo = sexo;
+        this.hijos = hijos;
+        this.correo = correo;
+        this.direccion = direccion;
+        this.sueldoLiquido = sueldoLiquido;
+        this.enfermedad = enfermedad;
+    }
+    
+     
     public Integer getIdCliente() {
         return this.idCliente;
     }

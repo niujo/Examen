@@ -13,7 +13,7 @@ public class EstadoPostulacion  implements java.io.Serializable {
 
      private int idEstado;
      private String nomEstado;
-     private Set clientes = new HashSet(0);
+     private Set estadoPostulacion = new HashSet(0);
 
     public EstadoPostulacion() {
     }
@@ -22,10 +22,10 @@ public class EstadoPostulacion  implements java.io.Serializable {
     public EstadoPostulacion(int idEstado) {
         this.idEstado = idEstado;
     }
-    public EstadoPostulacion(int idEstado, String nomEstado, Set clientes) {
+    public EstadoPostulacion(int idEstado, String nomEstado, Set estadoPostulacion) {
        this.idEstado = idEstado;
        this.nomEstado = nomEstado;
-       this.clientes = clientes;
+       this.estadoPostulacion = estadoPostulacion;
     }
    
     public int getIdEstado() {
@@ -43,11 +43,11 @@ public class EstadoPostulacion  implements java.io.Serializable {
         this.nomEstado = nomEstado;
     }
     public Set getClientes() {
-        return this.clientes;
+        return this.estadoPostulacion;
     }
     
-    public void setClientes(Set clientes) {
-        this.clientes = clientes;
+    public void setClientes(Set estadoPostulacion) {
+        this.estadoPostulacion = estadoPostulacion;
     }
 
 

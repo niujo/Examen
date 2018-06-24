@@ -13,14 +13,14 @@ public class EstadoCivil  implements java.io.Serializable {
 
      private Integer idEstadoCivil;
      private String nomEstado;
-     private Set clientes = new HashSet(0);
+     private Set estadoCivil = new HashSet(0);
 
     public EstadoCivil() {
     }
 
-    public EstadoCivil(String nomEstado, Set clientes) {
+    public EstadoCivil(String nomEstado, Set estadoCivil) {
        this.nomEstado = nomEstado;
-       this.clientes = clientes;
+       this.estadoCivil = estadoCivil;
     }
    
     public Integer getIdEstadoCivil() {
@@ -38,11 +38,11 @@ public class EstadoCivil  implements java.io.Serializable {
         this.nomEstado = nomEstado;
     }
     public Set getClientes() {
-        return this.clientes;
+        return this.estadoCivil;
     }
     
-    public void setClientes(Set clientes) {
-        this.clientes = clientes;
+    public void setClientes(Set estadoCivil) {
+        this.estadoCivil = estadoCivil;
     }
 
 
