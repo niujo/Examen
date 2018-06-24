@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 24-jun-2018 15:53:36 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Clases.Cliente" table="cliente" catalog="credibank_db" optimistic-lock="version">
+        <id name="idCliente" type="java.lang.Integer">
+            <column name="id_cliente" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="comuna" class="Clases.Comuna" fetch="select">
+            <column name="fk_comuna" />
+        </many-to-one>
+        <many-to-one name="estadoCivil" class="Clases.EstadoCivil" fetch="select">
+            <column name="fk_estado_c" />
+        </many-to-one>
+        <many-to-one name="estadoPostulacion" class="Clases.EstadoPostulacion" fetch="select">
+            <column name="fk_estado_p" />
+        </many-to-one>
+        <many-to-one name="nvlEducacional" class="Clases.NvlEducacional" fetch="select">
+            <column name="fk_nivel_edu" />
+        </many-to-one>
+        <many-to-one name="renta" class="Clases.Renta" fetch="select">
+            <column name="fk_renta" />
+        </many-to-one>
+        <property name="rut" type="string">
+            <column name="rut" length="10" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <property name="apePat" type="string">
+            <column name="ape_pat" length="50" />
+        </property>
+        <property name="apeMat" type="string">
+            <column name="ape_mat" length="50" />
+        </property>
+        <property name="fechaNac" type="date">
+            <column name="fecha_nac" length="10" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" length="50" />
+        </property>
+        <property name="hijos" type="java.lang.Integer">
+            <column name="hijos" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="50" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="50" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="50" />
+        </property>
+        <property name="sueldoLiquido" type="string">
+            <column name="sueldo_liquido" length="50" />
+        </property>
+        <property name="enfermedad" type="java.lang.Character">
+            <column name="enfermedad" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
